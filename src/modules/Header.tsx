@@ -10,7 +10,7 @@ const Header = () => {
     const handleModeeIconClick = () => document.body.classList.toggle("mode")
 
     return (
-        <header className="py-[17px] sm:py-[18px]">
+        <header className="fixed py-[17px] sm:py-[18px]">
             <div className="containers flex items-center justify-between ">
                 <a className="flex items-center gap-4" href="#">
                     <img src={LogoImg} alt="Logo img" width={40} height={36} />
@@ -24,7 +24,7 @@ const Header = () => {
                     <button className="lg:hidden text-[var(--clr-text)]"> <MenuIcon /> </button>
                 </div>
             </div>
-            <Modal/>
+            <Modal />
         </header>
     );
 };
