@@ -1,6 +1,7 @@
 import { MenuIcon, ModeIcon } from "../assets/icons";
 import LogoImg from "../assets/images/Group.svg";
 import Buttons from "../components/Buttons";
+import Modal from "../components/Modal";
 import NavItems from "../components/NavItems";
 
 const Header = () => {
@@ -23,6 +24,7 @@ const Header = () => {
                     <button className="lg:hidden text-[var(--clr-text)]"> <MenuIcon /> </button>
                 </div>
             </div>
+            <Modal/>
         </header>
     );
 };
