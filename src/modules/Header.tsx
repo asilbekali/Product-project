@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { MenuIcon, ModeIcon } from "../assets/icons";
 import LogoImg from "../assets/images/Group.svg";
 import Buttons from "../components/Buttons";
@@ -9,8 +10,10 @@ const Header = () => {
 
     const handleModeeIconClick = () => document.body.classList.toggle("mode")
 
+    const [mode, setMode] = useState<boolean>(false)
+
     return (
-        <header className="fixed py-[17px] sm:py-[18px]">
+        <header className="py-[17px] sm:py-[18px]">
             <div className="containers flex items-center justify-between ">
                 <a className="flex items-center gap-4" href="#">
                     <img src={LogoImg} alt="Logo img" width={40} height={36} />
@@ -21,10 +24,10 @@ const Header = () => {
                     <Buttons extraClass="!bg-transparent  !border-[#BCD0E5]  !text-[var(--clr-text)]" title="Sign In" type="button" />
                     <Buttons title="Sign Up" type="button" />
                     <button onClick={handleModeeIconClick} className="bg-[#F3F3F3] p-[4px] hidden sm:block cursor-pointer text-[var(--clr-light-green)] rounded-full"><ModeIcon /></button>
-                    <button className="lg:hidden text-[var(--clr-text)]"> <MenuIcon /> </button>
+                    <button onClick={() => setMode(true)} className="lg:hidden text-[var(--clr-text)]]"> <MenuIcon /> </button>
                 </div>
             </div>
-            <Modal />
+            <Modal mode={mode} setMode={setMode}/>
         </header>
     );
 };
