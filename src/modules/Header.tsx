@@ -27,9 +27,11 @@ const Header = () => {
                     <button onClick={() => setMode(true)} className="lg:hidden text-[var(--clr-text)]]"> <MenuIcon /> </button>
                 </div>
             </div>
-            <Modal mode={mode} setMode={setMode}/>
+            <Modal mode={mode} setMode={setMode} />
         </header>
     );
 };
 
 export default Header;
+
+
