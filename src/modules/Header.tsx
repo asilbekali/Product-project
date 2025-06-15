@@ -13,8 +13,8 @@ const Header = () => {
     const [mode, setMode] = useState<boolean>(false)
 
     return (
-        <header className="py-[17px] sm:py-[18px]">
-            <div className="containers flex items-center justify-between ">
+        <header className="py-[17px] sm:py-[18px] w-[100%]">
+                <div className="containers flex items-center justify-between">
                 <a className="flex items-center gap-4" href="#">
                     <img src={LogoImg} alt="Logo img" width={40} height={36} />
                     <strong className="text-[var(--clr-text)] text-[30px] leading-[28px]">Product</strong>

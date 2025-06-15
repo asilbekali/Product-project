@@ -1,0 +1,169 @@
+@import "../../mixin.scss";
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+.hero-sectio {
+    padding: 25px 0 115px;
+}
+
+.hero {
+    // heroga teng ==> &
+    @media (max-width: 1040px) {
+        text-align: center;
+        margin: 0 auto;
+        height: auto;
+        width: 100%; 
+        flex-direction: column-reverse;
+    }
+
+    @include Display($space: space-between, $gap: 0);
+
+    margin-top: 25px;
+    width: 100%;
+    max-width: 1049px;
+    height: 555px;
+    position: relative;
+    top: 105px;
+
+    &__title {
+        @include TextStyle(
+            $FW: 700px,
+            $FS: 40px,
+            $LH: 100%,
+            $LS: 0,
+            $CLR: var(--clr-text),
+            $MB: 18px
+        );
+    }
+
+    &__text {
+        @include TextStyle(
+            $FW: 400px,
+            $FS: 18px,
+            $LH: 100%,
+            $LS: 0,
+            $CLR: var(--clr-text),
+            $MB: 0px
+        );
+    }
+
+    &__btn-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 45px;
+    }
+
+    &__img {
+        width: 100%; 
+        max-width: 600px;
+        height: auto; 
+        color: #141414;
+    }
+
+    .btns {
+        @include Display($space: start, $gap: 30px);
+
+        &__btn-start {
+            @include TextStyle(
+                $FW: 700,
+                $FS: 16px,
+                $LH: 100%,
+                $LS: 0px,
+                $CLR: white,
+                $MB: 0px
+            );
+
+            @include BtnStyle(
+                $W: 205px,
+                $H: 53px,
+                $BG: #02897a,
+                $BTNCLR: white,
+                $BTNMB: 18px
+            );
+
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 15px 41px 14px 41px;
+        }
+
+        &__box {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            padding-top: 5px;
+            color: #02897a;
+        }
+
+        &_btn-watch {
+            display: flex;
+            cursor: pointer;
+
+            @include BtnStyle(
+                $W: 175px,
+                $H: 53px,
+                $BG: #02897a,
+                $BTNCLR: white,
+                $BTNMB: 0px
+            );
+
+            @include TextStyle(
+                $FW: 600,
+                $FS: 16px,
+                $LH: 100%,
+                $LS: 0px,
+                $CLR: white,
+                $MB: 0px
+            );
+
+            text-decoration: underline;
+            text-decoration-style: solid;
+            color: #02897a;
+        }
+    }
+}
+
+.feature {
+    @media (max-width: 1040px) {
+        flex-direction: column;
+        padding: 0 16px; 
+    }
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 66px;
+    margin-top: 114px;
+
+    &__title {
+        width: 100%;
+        max-width: 539px;
+        height: auto;
+        text-align: center;
+
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0px;
+    }
+
+    &__btn {
+        @include BtnStyle(
+            $W: 175px,
+            $H: 53px,
+            $BG: #02897a,
+            $BTNCLR: white,
+            $BTNMB: 0px
+        );
+    }
+}
