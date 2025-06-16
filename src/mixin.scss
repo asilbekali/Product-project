@@ -14,6 +14,7 @@
     margin-bottom: $MB;
 }
 
+
 @mixin BtnStyle($W, $H, $BG, $BTNCLR, $BTNMB) {
     @include TextStyle(
         $FW: 700px,
@@ -21,8 +22,8 @@
         $LH: 100%,
         $LS: 0,
         $CLR: $BTNCLR,
-        $MB: $BTNMB,
-    );
+        $MB: $BTNMB
+        );
 
     border-radius: 4px;
     width: $W;
@@ -33,7 +34,7 @@
     border: 2px solid #02897a;
     position: relative;
     overflow: hidden;
-
+    
     &:hover {
         background-color: transparent;
         color: $BG;
@@ -52,7 +53,7 @@
         left: 0;
         z-index: -1;
     }
-
+    
     &::after {
         transition: all 0.3s;
         content: "";
@@ -64,14 +65,23 @@
         right: 0;
         z-index: -1;
     }
-
+    
     &:hover::before {
         transition: all 0.5s;
         left: -100%;
     }
-
+    
     &:hover::after {
         transition: all 0.5s;
         right: -100%;
     }
+}
+
+
+
+@mixin StyleSomeOne($w, $h, $t, $lft) {
+    width: $w;
+    height: $h;
+    top: $t;
+    left: $lft;
 }

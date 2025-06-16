@@ -1,9 +1,19 @@
 @import "../../mixin.scss";
 
+// .containers{
+//     background-color: red;
+// }
+
+// for exanple
+
+// .hero-sectio{
+//     background-color: red;
+// }
+
 html,
 body {
     width: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +28,7 @@ body {
         text-align: center;
         margin: 0 auto;
         height: auto;
-        width: 100%; 
+        width: 100%;
         flex-direction: column-reverse;
     }
 
@@ -61,9 +71,9 @@ body {
     }
 
     &__img {
-        width: 100%; 
+        width: 100%;
         max-width: 600px;
-        height: auto; 
+        height: auto;
         color: #141414;
     }
 
@@ -134,7 +144,7 @@ body {
 .feature {
     @media (max-width: 1040px) {
         flex-direction: column;
-        padding: 0 16px; 
+        padding: 0 16px;
     }
 
     width: 100%;
@@ -142,14 +152,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 66px;
-    margin-top: 114px;
+    margin-top: 214px;
 
     &__title {
         width: 100%;
         max-width: 539px;
         height: auto;
         text-align: center;
-
+        color: var(--clr-text);
         font-family: Poppins;
         font-weight: 700;
         font-size: 32px;
@@ -158,12 +168,120 @@ body {
     }
 
     &__btn {
+        @include TextStyle(
+            $FW: 700,
+            $FS: 16px,
+            $LH: 100%,
+            $LS: 0px,
+            $CLR: white,
+            $MB: 0px
+        );
+
         @include BtnStyle(
-            $W: 175px,
+            $W: 195px,
             $H: 53px,
             $BG: #02897a,
             $BTNCLR: white,
-            $BTNMB: 0px
+            $BTNMB: 18px
+        );
+
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        padding: 15px 41px 14px 41px;
+    }
+}
+
+.management {
+    @media (max-width: 587px) {
+        width: 349px;
+        height: 761px;
+        top: 2043px;
+        left: 31px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            width: 334px;
+            height: 435px;
+            top: 2399.1px;
+            left: 41px;
+        }
+
+        &__desc {
+            width: 334px;
+            height: 104px;
+            @include TextStyle(
+                $FW: 400px,
+                $FS: 16px,
+                $LH: 26px,
+                $LS: 0px,
+                $CLR: var(--clr-text),
+                $MB: 8px
+            );
+        }
+    }
+
+    margin-top: 150px;
+    width: 1109px;
+    height: 473px;
+    @include Display($space: space-between, $gap: 84px);
+
+    &__docs-img {
+        @include StyleSomeOne($w: 539px, $h: 473px, $t: 1467px, $lft: 715px);
+    }
+
+    &__text {
+        @include StyleSomeOne($w: 486px, $h: 435px, $t: 1486px, $lft: 145px);
+    }
+
+    &__p {
+        @include TextStyle(
+            $FW: 600px,
+            $FS: 16px,
+            $LH: 100%,
+            $LS: 0px,
+            $CLR: var(--clr-text),
+            $MB: 8px
+        );
+    }
+
+    &__h2 {
+        @include TextStyle(
+            $FW: 700px,
+            $FS: 32px,
+            $LH: 100%,
+            $LS: 0px,
+            $CLR: var(--clr-text),
+            $MB: 131px
+        );
+    }
+
+    &__title {
+        @include TextStyle(
+            $FW: 600px,
+            $FS: 16px,
+            $LH: 26px,
+            $LS: 0px,
+            $CLR: var(--clr-text),
+            $MB: 12px
+        );
+    }
+
+    &__desc {
+        @include TextStyle(
+            $FW: 400px,
+            $FS: 16px,
+            $LH: 26px,
+            $LS: 0px,
+            $CLR: var(--clr-text),
+            $MB: 25px
         );
     }
 }
