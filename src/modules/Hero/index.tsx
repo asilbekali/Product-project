@@ -37,8 +37,19 @@ const Hero = () => {
                 <div className="feature">
                     <h2 className="feature__title" >Product  was Built Specifically
                         for You</h2>
-                    <img  src="src/assets/images/Card.svg" alt="photo" />
+                    <img src="src/assets/images/Card.svg" alt="photo" />
                     <button className="feature__btn">SIGN UP NOW</button>
+                </div>
+                <div className="management">
+                    <div className="management__text">
+                        <p className="management__p">Effortless Validation for</p>
+                        <h2 className="management__h2"><b>Management</b></h2>
+                        <h5 className="management__title">Accessory makers</h5>
+                        <p className="management__desc" >While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
+                        <h5 className="management__title">Alterationists</h5>
+                        <p className="management__desc" >If you are looking for a new way to promote your business that won’t cost you more money, </p>
+                    </div>
+                    <img className="management__docs-img" src="src/assets/images/docs.png" alt="docs photo" />
                 </div>
             </div>
         </section>
